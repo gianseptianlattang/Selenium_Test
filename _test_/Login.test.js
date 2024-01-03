@@ -11,9 +11,7 @@ describe("Login to OrangeHRM", () => {
       driver = await new Builder().forBrowser("chrome").build();
       driver.manage().window().maximize();
     });
-    after(async () => {
-      await driver.close();
-    });
+    after(async () => {});
 
     it("As a user, I can open login page and see the component", async function () {
       await LoginPage.openLoginPage(driver);
